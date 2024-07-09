@@ -4,7 +4,7 @@
 - A cluster with MetalLB installed
 - A NFS server as a storage class
 - NFS client installed in all cluster nodes
-- Ingress controller 
+- Ingress controller in the cluster 
   
 # Setup Procedure : 
 Create a namespace.
