@@ -15,7 +15,7 @@ Shift to the erpnext namespace.
 ```
 kubens erpnext
 ```
-Add frappe helm repo.
+Add frappe helm release.
 ```
 helm repo add frappe https://helm.erpnext.com
 ```
