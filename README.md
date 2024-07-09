@@ -39,11 +39,11 @@ Create ingress resource.
 ```
 kubectl apply -f ingress.yaml
 ```
-Generate backup site yaml.
+Generate backup-site yaml.
 ```
 helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s templates/job-backup.yaml > job-backup.yaml
 ```
-Create backup site resource.
+Create backup-site resource.
 ```
 kubectl apply -f job-drop-site.yaml
 ```
@@ -51,7 +51,7 @@ Restore the backup applying following command.
 ```
 bench --site [sitename] --force restore [path sql database which file name] --with-private-files[filename] --with-public-files[filename]
 ```
-Generate a drop site yaml.
+Generate a drop-site yaml.
 ```
 helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s templates/job-drop-site.yaml > job-drop-site.yaml
 ```
