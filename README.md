@@ -1,7 +1,7 @@
 # ERPNext
 
 # Requirememts: 
-- A cluster with MetalLB installed
+- A cluster with MetalLB installed ( For cluster set up <a href="https://github.com/nasirnjs/kubernetes/blob/main/k8s-cluster-setup/k8s-1.29-cluster-setup-ubuntu-22.md">)
 - A NFS server as a storage class
 - NFS client installed in all cluster nodes
 - Ingress controller in the cluster
