@@ -27,7 +27,7 @@ Generate an yaml for create-site.
 ```
 helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s templates/job-create-site.yaml > create-new-site-job.yaml
 ```
-Create job resource.
+Apply create-site yaml to create a new site. 
 ```
 kubectl apply -f create-new-site-job.yaml
 ```
