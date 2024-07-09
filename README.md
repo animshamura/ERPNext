@@ -18,3 +18,15 @@ Add frappe helm repo.
 ```
 helm repo add frappe https://helm.erpnext.com
 ```
+Install helm chart and create repo.
+```
+helm install frappe-bench -n erpnext -f custom-values.yaml frappe/erpnext
+```
+Generate a yaml for createsite.
+```
+helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s templates/job-create-site.yaml > create-new-site-job.yaml
+```
+Create job resource.
+```
+kubectl apply -f create-new-site-job.yaml
+```
