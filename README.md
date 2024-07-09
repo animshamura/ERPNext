@@ -2,7 +2,7 @@
 
 # Requirememts: 
 - A cluster with MetalLB installed (<a href="https://github.com/nasirnjs/kubernetes/blob/main/k8s-cluster-setup/k8s-1.29-cluster-setup-ubuntu-22.md"> Cluster Setup</a> and <a href="https://github.com/nasirnjs/kubernetes/blob/main/k8s-cluster-setup/metallb-l2-configuration.md"> MetalLB Installation</a>)
-- A NFS server as a storage class
+- A NFS server as a storage class ( <a href="https://github.com/nasirnjs/kubernetes/blob/main/k8s-cluster-setup/dynamic-nfs-provisioning_k8s.md"> Setup Dynamic NFS </a>)
 - NFS client installed in all cluster nodes
 - Ingress controller in the cluster
 
