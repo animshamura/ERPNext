@@ -46,3 +46,7 @@ Create backup site resource.
 ```
 kubectl apply -f job-drop-site.yaml
 ```
+Restore the backup applying following command.
+```
+bench --site [sitename] --force restore [path sql database which file name] --with-private-files[filename] --with-public-files[filename]
+```
