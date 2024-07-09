@@ -50,3 +50,12 @@ Restore the backup applying following command.
 ```
 bench --site [sitename] --force restore [path sql database which file name] --with-private-files[filename] --with-public-files[filename]
 ```
+Generate a drop site yaml.
+```
+helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s templates/job-drop-site.yaml > job-drop-site.yaml
+```
+Apply drop-site yaml to archive a site.
+```
+kubectl apply -f job-drop-site.yaml
+```
+
