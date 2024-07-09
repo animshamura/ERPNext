@@ -15,11 +15,11 @@ Shift to the erpnext namespace.
 ```
 kubens erpnext
 ```
-Add frappe helm release.
+Add frappe helm repo.
 ```
 helm repo add frappe https://helm.erpnext.com
 ```
-Install helm chart and create repo.
+Install helm chart and create release.
 ```
 helm install frappe-bench -n erpnext -f custom-values.yaml frappe/erpnext
 ```
