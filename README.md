@@ -22,11 +22,27 @@ Install helm chart and create repo.
 ```
 helm install frappe-bench -n erpnext -f custom-values.yaml frappe/erpnext
 ```
-Generate a yaml for createsite.
+Generate an yaml for create-site.
 ```
 helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s templates/job-create-site.yaml > create-new-site-job.yaml
 ```
 Create job resource.
 ```
 kubectl apply -f create-new-site-job.yaml
+```
+Generate ingress yaml.
+```
+helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s templates/ingress.yaml > ingress.yaml
+```
+Create ingress resource.
+```
+kubectl apply -f ingress.yaml
+```
+Generate backup site yaml.
+```
+helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s templates/job-backup.yaml > job-backup.yaml
+```
+Create backup site resource.
+```
+kubectl apply -f job-drop-site.yaml
 ```
