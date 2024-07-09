@@ -4,7 +4,8 @@
 - A cluster with MetalLB installed
 - A NFS server as a storage class
 - NFS client installed in all cluster nodes
-- Ingress controller in the cluster 
+- Ingress controller in the cluster
+
   
 # Setup Procedure : 
 Create a namespace.
@@ -12,6 +13,7 @@ Create a namespace.
 kubectl create namespace
 ```
 Shift to the erpnext namespace.
+If Kubectx hasn't been installed, use ``` sudo snap install kubectx --classic ``` .
 ```
 kubens erpnext
 ```
