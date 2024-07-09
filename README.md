@@ -13,7 +13,7 @@ Create a namespace.
 kubectl create namespace
 ```
 Shift to the erpnext namespace.
-If Kubectx hasn't been installed, use ``` sudo snap install kubectx --classic ``` .
+If Kubectx hasn't been installed, apply ``` sudo snap install kubectx --classic ``` .
 ```
 kubens erpnext
 ```
