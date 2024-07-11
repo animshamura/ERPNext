@@ -10,7 +10,7 @@
 # Setup Procedure : 
 Create a namespace.
 ```
-kubectl create namespace
+kubectl create namespace erpnext
 ```
 Shift to the erpnext namespace.
 If Kubectx hasn't been installed, apply ``` sudo snap install kubectx --classic ``` .
