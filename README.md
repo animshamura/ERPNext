@@ -4,7 +4,7 @@
 - A cluster with MetalLB and Ingress Controller
 - A NFS server as a storage class
 - NFS client installed in all nodes
-- 
+  
 ## ☐ Setup Procedure : 
 
 ### Step 1:
