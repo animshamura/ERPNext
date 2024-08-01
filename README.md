@@ -36,7 +36,7 @@ Install helm chart and create release.
 helm install frappe-bench -n erpnext -f custom-values.yaml frappe/erpnext
 ```
 ### ■ Step 5:
-Make ```enabled : true``` in ingress section and generate ingress yaml.
+Make ```enabled : true``` and mention the ingress-class-name created by the Orgpod in ingress section and generate ingress yaml.
 ```
 helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s templates/ingress.yaml > ingress.yaml
 ```
