@@ -39,22 +39,22 @@ Install helm chart and create release.
 helm install frappe-bench -n erpnext -f custom-values.yaml frappe/erpnext
 ```
 **Step 5:** </br></br>
-Generate an yaml for create-site.
-```
-helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s templates/job-create-site.yaml > create-new-site-job.yaml
-```
-Apply create-site yaml to create a new site. 
-```
-kubectl apply -f create-new-site-job.yaml
-```
-**Step 6:** </br></br>
-Generate ingress yaml.
+Make ```enabled : true``` in ingress and generate ingress yaml.
 ```
 helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s templates/ingress.yaml > ingress.yaml
 ```
 Create ingress resource.
 ```
 kubectl apply -f ingress.yaml
+```
+**Step 6:** </br></br>
+Make ```enabled : true``` in createsite and generate an yaml for create-site.
+```
+helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s templates/job-create-site.yaml > create-new-site-job.yaml
+```
+Apply create-site yaml to create a new site. 
+```
+kubectl apply -f create-new-site-job.yaml
 ```
 
 
