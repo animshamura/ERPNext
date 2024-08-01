@@ -8,16 +8,17 @@
 
   
 ## ☐ Setup Procedure : 
-▢ Create a Orgpod. This will create a namespace and an ingress-class-name. </br> 
-▢ Shift to the namespace that's been created by the Orgpod. 
+
+**▢ Step 1:** Create a Orgpod. This will create a namespace and an ingress-class-name. </br> 
+**▢ Step 2:** Shift to the namespace that's been created by the Orgpod. 
 ```
 kubens erpnext
 ```
-▢ Add frappe helm repo.
+**▢ Step 3:** Add frappe helm repo.
 ```
 helm repo add frappe https://helm.erpnext.com
 ```
-▢ Before installing helm chart, edit the custom-values.yaml file.</br> 
+**Step 4:** Before installing helm chart, edit the custom-values.yaml file.</br> 
 Make sure :</br> 
 ✓ Proper image tag has been mentioned. </br> 
 ✓ Keep ```enabled : false``` in ingress, createsite, dropsite, backup and migrate. </br>    
@@ -25,7 +26,7 @@ Install helm chart and create release.
 ```
 helm install frappe-bench -n erpnext -f custom-values.yaml frappe/erpnext
 ```
-▢ Generate an yaml for create-site.
+**▢ Step 5:** Generate an yaml for create-site.
 ```
 helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s templates/job-create-site.yaml > create-new-site-job.yaml
 ```
@@ -33,7 +34,7 @@ helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s te
 ```
 kubectl apply -f create-new-site-job.yaml
 ```
-▢ Generate ingress yaml.
+**▢ Step 6:** Generate ingress yaml.
 ```
 helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s templates/ingress.yaml > ingress.yaml
 ```
