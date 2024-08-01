@@ -63,5 +63,5 @@ kubectl apply -f job-drop-site.yaml
 ```
 
 ### ☐ Note
-✓ For upgrading new image ``` helm upgrade resources-dev resources --reuse-values --set-string image.tag=0.0.15 --dry-run --debug ```
+✓ For upgrading new image ``` helm upgrade frappe-bench frappe/erpnext --reuse-values --set-string image.tag=0.0.15 --dry-run --debug ```
 
