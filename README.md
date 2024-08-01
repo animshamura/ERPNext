@@ -22,7 +22,7 @@ Add frappe helm repo.
 helm repo add frappe https://helm.erpnext.com
 ```
 ### Step 4:
-Before installing helm chart, edit the custom-values.yaml file. Then, make sure :</br> 
+Before installing helm chart, edit the custom-values.yaml file. Make sure :</br> 
 ✓ Proper image tag has been mentioned. </br> 
 ✓ Keep ```enabled : false``` in ingress, createsite, dropsite, backup and migrate.   
 ✓ Comment out custom_erp_app. 
