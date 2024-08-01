@@ -64,4 +64,6 @@ kubectl apply -f job-drop-site.yaml
 
 ### ☐ Note
 ✓ For upgrading new image ``` helm upgrade frappe-bench frappe/erpnext --reuse-values --set-string image.tag=0.0.15 --dry-run --debug ```
+✓ Edit the custom.values.yaml having the right image tag and disable the jobs and others for creating template
+✓ Manually install custom ERP app ``` bench site aeslerp.com install-app custom_erp_app 
 
