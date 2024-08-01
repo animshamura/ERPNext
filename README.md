@@ -11,7 +11,7 @@
 
 **Step 1:** </br>
 Create a Orgpod. This will create a namespace and an ingress-class-name. </br> 
-**▢ Step 2:** </br>
+**Step 2:** </br>
 Shift to the namespace that's been created by the Orgpod. 
 ```
 kubens erpnext
