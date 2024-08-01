@@ -1,7 +1,7 @@
 # ERPNext
 
 ## ☐ Requirememts: 
-- A cluster with MetalLB installed 
+- A cluster with MetalLB 
 - A NFS server as a storage class
 - NFS client installed in all cluster nodes 
 - Ingress controller in the cluster 
