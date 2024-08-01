@@ -10,7 +10,7 @@
 ## ☐ Setup Procedure : 
 
 **Step 1:** </br></br>
-Create a Orgpod. This will create a namespace and an ingress-class-name. </br> </br>
+Create an Orgpod. This will create a namespace and an ingress-class-name. </br> </br>
 **Step 2:** </br></br>
 Shift to the namespace that's been created by the Orgpod. 
 ```
@@ -56,6 +56,16 @@ Apply create-site yaml to create a new site.
 ```
 kubectl apply -f create-new-site-job.yaml
 ```
-
+**Step 7:** </br></br> 
+After having updation through the UI by the erpnext-backend team.</br> 
+Following bench commands have to be executed in the Nginx container. </br> 
+```
+#!/usr/bin/bash
+bench --site aeslerp.com install-app custom_erp_app
+bench --site aeslerp.com reload-doctype Employee
+bench --site aeslerp.com reload-doctype "Job Requisition"
+bench --site aeslerp.com reload-doctype "Job Opening"
+bench --site aeslerp.com reload-doctype "Workflow Document State"
+```
 
 
