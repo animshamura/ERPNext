@@ -26,6 +26,14 @@ Before installing helm chart, edit the custom-values.yaml file.</br>
 Make sure :</br> 
 ✓ Proper image tag has been mentioned. </br> 
 ✓ Keep ```enabled : false``` in ingress, createsite, dropsite, backup and migrate. </br>    
+✓ Comment out custom_erp_app. 
+```
+installApps:
+    - "frappe"
+    - "erpnext"
+    - "hrms"
+    # - "custom_erp_app"
+```
 Install helm chart and create release.
 ```
 helm install frappe-bench -n erpnext -f custom-values.yaml frappe/erpnext
