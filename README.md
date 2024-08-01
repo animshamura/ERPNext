@@ -25,7 +25,7 @@ helm repo add frappe https://helm.erpnext.com
 Before installing helm chart, edit the custom-values.yaml file.</br> 
 Make sure :</br> 
 ✓ Proper image tag has been mentioned. </br> 
-✓ Keep ```enabled : false``` in ingress, createsite, dropsite, backup and migrate. </br>    
+✓ Keep ```enabled : false``` in ingress, createsite, dropsite, backup and migrate.   
 ✓ Comment out custom_erp_app. 
 ```
 installApps:
