@@ -1,11 +1,11 @@
 # ERPNext
 
-## ☐ Requirememts: 
+## ■ Requirememts: 
 - A cluster with MetalLB and Ingress Controller
 - A NFS server as a storage class
 - NFS client installed in all nodes
   
-## ☐ Setup Procedure : 
+## ■ Setup Procedure : 
 
 ### ☐ Step 1:
 Create an Orgpod. This will create a namespace and an ingress-class-name. 
