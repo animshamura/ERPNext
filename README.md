@@ -7,7 +7,7 @@
 - 
 ## ☐ Setup Procedure : 
 
-### ■ Step 1:
+### Step 1:
 Create an Orgpod. This will create a namespace and an ingress-class-name. 
 ### Step 2:
 Shift to the namespace that's been created by the Orgpod. 
