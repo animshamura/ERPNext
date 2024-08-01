@@ -8,12 +8,9 @@
 
   
 ## ☐ Setup Procedure : 
-Create a namespace.
+Create a Orgpod. This will create a namespace and an ingress-class-name. 
 ```
-kubectl create namespace erpnext
-```
-Shift to the erpnext namespace.
-If Kubectx hasn't been installed, apply ``` sudo snap install kubectx --classic ``` .
+Shift to the namespace that's been created by the Orgpod. 
 ```
 kubens erpnext
 ```
@@ -21,6 +18,10 @@ Add frappe helm repo.
 ```
 helm repo add frappe https://helm.erpnext.com
 ```
+Before installing helm chart, edit the custom-values.yaml file.
+Make sure :
+✓ Proper image tag has been mentioned. </br> 
+✓ Keep ``` enabled : false ``` in ingress, createsite, dropsite, backup and migrate. </br>    
 Install helm chart and create release.
 ```
 helm install frappe-bench -n erpnext -f custom-values.yaml frappe/erpnext
