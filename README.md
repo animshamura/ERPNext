@@ -22,8 +22,7 @@ Add frappe helm repo.
 helm repo add frappe https://helm.erpnext.com
 ```
 ### Step 4:
-Before installing helm chart, edit the custom-values.yaml file.</br> 
-Make sure :</br> 
+Before installing helm chart, edit the custom-values.yaml file. Then, make sure :</br> 
 ✓ Proper image tag has been mentioned. </br> 
 ✓ Keep ```enabled : false``` in ingress, createsite, dropsite, backup and migrate.   
 ✓ Comment out custom_erp_app. 
@@ -39,7 +38,7 @@ Install helm chart and create release.
 helm install frappe-bench -n erpnext -f custom-values.yaml frappe/erpnext
 ```
 ### Step 5:
-Make ```enabled : true``` in ingress and generate ingress yaml.
+Make ```enabled : true``` in ingress section and generate ingress yaml.
 ```
 helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s templates/ingress.yaml > ingress.yaml
 ```
@@ -48,7 +47,7 @@ Create ingress resource.
 kubectl apply -f ingress.yaml
 ```
 ### Step 6:
-Make ```enabled : true``` in createsite and generate an yaml for create-site.
+Make ```enabled : true``` in createsite section and generate an yaml for create-site.
 ```
 helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s templates/job-create-site.yaml > create-new-site-job.yaml
 ```
@@ -57,8 +56,7 @@ Apply create-site yaml to create a new site.
 kubectl apply -f create-new-site-job.yaml
 ```
 ### Step 7:
-After having updation through the UI by the erpnext-backend team.</br> 
-Following bench commands have to be executed in the Nginx container. </br> 
+After having updation through the UI by the erpnext-backend team, following bench commands have to be executed in the Nginx container. </br> 
 ```
 #!/usr/bin/bash
 bench --site aeslerp.com install-app custom_erp_app
