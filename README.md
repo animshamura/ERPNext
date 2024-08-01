@@ -8,7 +8,7 @@
 ## ■ Setup Procedure : 
 
 ### ■ Step 1:
-Create an Orgpod. This will create a ```namespace``` and an ```ingress-class-name```. 
+Create an Orgpod. This will create a ```namespace``` and an ```ingress-class```. 
 ### ■ Step 2:
 Shift to the namespace that's been created by the Orgpod. 
 ```
@@ -36,7 +36,7 @@ Install helm chart and create release.
 helm install frappe-bench -n erpnext -f custom-values.yaml frappe/erpnext
 ```
 ### ■ Step 5:
-Make ```enabled : true``` and mention the ingress-class-name created by the Orgpod in ingress section and generate ingress yaml.
+Make ```enabled : true``` and mention the ```ingress-class``` created by the Orgpod in ingress section and generate ingress yaml.
 ```
 helm template frappe-bench -n erpnext frappe/erpnext -f custom-values.yaml -s templates/ingress.yaml > ingress.yaml
 ```
