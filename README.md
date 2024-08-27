@@ -57,11 +57,11 @@ kubectl apply -f create-new-site-job.yaml
 After having updation through the UI by the erpnext-backend team, following bench commands have to be executed in the Nginx container. </br> 
 ```
 #!/usr/bin/bash
-bench --site aeslerp.com install-app custom_erp_app
-bench --site aeslerp.com reload-doctype Employee
-bench --site aeslerp.com reload-doctype "Job Requisition"
-bench --site aeslerp.com reload-doctype "Job Opening"
-bench --site aeslerp.com reload-doctype "Workflow Document State"
+bench --site erpmext.com install-app custom_erp_app
+bench --site erpnext.com reload-doctype Employee
+bench --site erpnext.com reload-doctype "Job Requisition"
+bench --site erpnext.com reload-doctype "Job Opening"
+bench --site erpnext.com reload-doctype "Workflow Document State"
 ```
 
 
